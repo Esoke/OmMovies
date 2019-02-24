@@ -27,7 +27,7 @@ class SplashViewController: UIViewController {
     
     func setupRemoteConfigDefaults() {
         let defaultValues = [
-            Constants.LabelKeys.titleText.rawValue : "" as NSObject,
+            Constants.LabelKeys.titleText : "" as NSObject,
         ]
         RemoteConfig.remoteConfig().setDefaults(defaultValues)
     }
@@ -48,7 +48,7 @@ class SplashViewController: UIViewController {
     
     func updateUIWithRemoteConfigValues() {
         let rc = RemoteConfig.remoteConfig()
-        if let title = rc.configValue(forKey: Constants.LabelKeys.titleText.rawValue).stringValue {
+        if let title = rc.configValue(forKey: Constants.LabelKeys.titleText).stringValue {
             self.titleLabel.text = title
             timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.openMovieList), userInfo: nil, repeats: false)
 
@@ -57,7 +57,7 @@ class SplashViewController: UIViewController {
     
     @objc func openMovieList() {
         timer.invalidate()
-        let vc = Storyboard.Main.instantiateViewController(withIdentifier: Page.Identifier.MovieList)
+        let vc = Storyboard.Main.instantiateViewController(withIdentifier: Page.Identifier.MovieNavigation)
         self.present(vc, animated: false, completion: nil)
 
     }

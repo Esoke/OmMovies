@@ -10,8 +10,10 @@ import UIKit
 
 enum Constants {
     
-    enum LabelKeys:String {
-        case titleText = "titleText"
+    enum LabelKeys {
+        static var titleText:String {
+            return "titleText"
+        }
     }
 
 }
@@ -35,8 +37,24 @@ enum Storyboard {
     }
 }
 
+enum Cell {
+    enum NibName {
+        static var Movie:String{
+            return "MovieTableViewCell"
+        }
+    }
+    enum Identifier {
+        static var Movie:String {
+            return "MovieTableViewCell"
+        }
+    }
+}
+
 enum Page {
     enum Identifier {
+        static var MovieNavigation:String {
+            return "MovieNavigation"
+        }
         static var MovieList:String {
             return "MovieListViewController"
         }
