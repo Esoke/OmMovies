@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import Firebase
 
 class MovieDetailViewController: UIViewController {
     
@@ -27,6 +28,13 @@ class MovieDetailViewController: UIViewController {
         fetchData()
     }
     
+    func logFirebase(with movie:MovieDetail) {
+        Analytics.logEvent("movieDetails", parameters: [
+            "title": movie.title as NSObject,
+            "genre": movie.genre as NSObject,
+            "runTime": movie.runTime as NSObject
+            ])
+    }
     
     func fetchData() {
         OmService.shared.getMovieDetail(with: imdbId) {[unowned self] (response) in
@@ -34,6 +42,7 @@ class MovieDetailViewController: UIViewController {
             case .success(let response):
                 let details = response.movieDetail
                 self.fillDetails(for: details)
+                self.logFirebase(with: details)
             case .failure(let error):
                 print(error)
             }
