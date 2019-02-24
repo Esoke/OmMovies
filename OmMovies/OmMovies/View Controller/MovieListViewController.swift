@@ -64,6 +64,11 @@ class MovieListViewController: UIViewController {
         }
     }
 
+    func openMovieDetails(with imdbId:String){
+        guard let movieDetailsVC = Storyboard.Main.instantiateViewController(withIdentifier: ViewController.Identifier.MovieDetail) as? MovieDetailViewController else { return }
+        movieDetailsVC.imdbId = imdbId
+        self.navigationController?.pushViewController(movieDetailsVC, animated: true)
+    }
 }
 
 
@@ -90,7 +95,10 @@ extension MovieListViewController: UITableViewDataSource {
 }
 
 extension MovieListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let id = self.movieList[indexPath.row].imdbID
+        openMovieDetails(with: id)
+    }
 }
 
 extension MovieListViewController: UISearchBarDelegate {

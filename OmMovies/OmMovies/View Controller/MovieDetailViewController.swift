@@ -7,16 +7,51 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailViewController: UIViewController {
     
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var director: UILabel!
+    @IBOutlet weak var runtime: UILabel!
+    @IBOutlet weak var rated: UILabel!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var plot: UITextView!
+    
+    var imdbId:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        OmService.shared.getMovieDetail(with: "tt4649466") { (response) in
-            print(response)
+        fetchData()
+    }
+    
+    
+    func fetchData() {
+        OmService.shared.getMovieDetail(with: imdbId) {[unowned self] (response) in
+            switch response {
+            case .success(let response):
+                let details = response.movieDetail
+                self.fillDetails(for: details)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
+    func fillDetails(for movie:MovieDetail){
+        movieTitle.text = movie.title
+        genre.text = movie.genre
+        runtime.text = movie.runTime
+        rated.text = movie.rated
+        year.text = movie.year
+        director.text = movie.director
+        plot.text = movie.plot
+        
+        if let url = URL(string: movie.posterUrl){
+            posterView.af_setImage(withURL: url)
+        }
+    }
     
 }

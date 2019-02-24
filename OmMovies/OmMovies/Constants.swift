@@ -50,7 +50,7 @@ enum Cell {
     }
 }
 
-enum Page {
+enum ViewController {
     enum Identifier {
         static var MovieNavigation:String {
             return "MovieNavigation"

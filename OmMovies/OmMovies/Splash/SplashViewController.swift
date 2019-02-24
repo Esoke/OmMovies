@@ -57,7 +57,7 @@ class SplashViewController: UIViewController {
     
     @objc func openMovieList() {
         timer.invalidate()
-        let vc = Storyboard.Main.instantiateViewController(withIdentifier: Page.Identifier.MovieNavigation)
+        let vc = Storyboard.Main.instantiateViewController(withIdentifier: ViewController.Identifier.MovieNavigation)
         self.present(vc, animated: false, completion: nil)
 
     }
