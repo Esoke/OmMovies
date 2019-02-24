@@ -7,13 +7,59 @@
 //
 
 import UIKit
+import Firebase
 
 class SplashViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    private var timer = Timer()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ReachabilityManager.shared.isReachable()
+        setupRemoteConfigDefaults()
+        fetchRemoteConfig()
+    }
+    
+    //MARK: - Remote Config
+    
+    func setupRemoteConfigDefaults() {
+        let defaultValues = [
+            Constants.LabelKeys.titleText.rawValue : "" as NSObject,
+        ]
+        RemoteConfig.remoteConfig().setDefaults(defaultValues)
+    }
+    
+    
+    func fetchRemoteConfig() {
+        //Debug settings must be removed before production.
+        let debugSettings = RemoteConfigSettings.init(developerModeEnabled: true)
+        RemoteConfig.remoteConfig().configSettings = debugSettings
+        
+        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 0) {[unowned self] (status, error) in
+            guard error == nil else {print ("error fetching remote config"); return}
+            RemoteConfig.remoteConfig().activateFetched()
+            self.updateUIWithRemoteConfigValues()
+        }
+        
+    }
+    
+    func updateUIWithRemoteConfigValues() {
+        let rc = RemoteConfig.remoteConfig()
+        if let title = rc.configValue(forKey: Constants.LabelKeys.titleText.rawValue).stringValue {
+            self.titleLabel.text = title
+            timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.openMovieList), userInfo: nil, repeats: false)
+
+        }
+    }
+    
+    @objc func openMovieList() {
+        timer.invalidate()
+        let vc = Storyboard.Main.instantiateViewController(withIdentifier: Page.Identifier.MovieList)
+        self.present(vc, animated: false, completion: nil)
+
     }
 
 }
