@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        OmService.shared.getMovies(with: "King") { (response) in
+            print(response)
+        }
+        
+        OmService.shared.getMovieDetail(with: "tt4649466") { (response) in
+            print(response)
+        }
     }
 
 
