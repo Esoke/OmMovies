@@ -5,6 +5,10 @@ target 'OmMovies' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Core'
 
   # Pods for OmMovies
 
