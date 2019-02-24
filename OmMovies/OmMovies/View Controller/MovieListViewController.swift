@@ -59,6 +59,10 @@ class MovieListViewController: UIViewController {
                 self.movieList = response.movies
                 self.tableView.reloadData()
             case .failure(let error):
+                let alert = UIAlertController(title: "Ops!", message: "Movie cannot be found", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                UIApplication.topViewController()?.present(alert, animated: true, completion: nil)
                 print(error)
             }
         }

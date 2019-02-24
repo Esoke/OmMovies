@@ -23,10 +23,10 @@ public final class OmService {
                     let response = try decoder.decode(MovieListResponse.self, from: data)
                     completion(.success(response))
                 }catch {
-                    print("Serialization error")
+                     completion(.failure(Error.serializationError(internal: error)))
                 }
             case .failure(let error):
-                print(error)
+                completion(.failure(Error.networkError(internal: error)))
             }
         }
     }
@@ -40,14 +40,19 @@ public final class OmService {
                     let response = try decoder.decode(MovieDetailResponse.self, from: data)
                     completion(.success(response))
                 }catch {
-                    print("Serialization error")
+                     completion(.failure(Error.serializationError(internal: error)))
                 }
             case .failure(let error):
-                print(error)
+                completion(.failure(Error.networkError(internal: error)))
             }
         
         }
     }
+}
+
+enum Error: Swift.Error {
+    case serializationError(internal: Swift.Error)
+    case networkError(internal: Swift.Error)
 }
 enum Result<Value> {
     case success(Value)
