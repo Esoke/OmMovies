@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7651DB0846F555633E159276 /* Pods_OmMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */; };
 		76A9279B2222DB2100DD04F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9279A2222DB2100DD04F1 /* AppDelegate.swift */; };
 		76A9279D2222DB2100DD04F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9279C2222DB2100DD04F1 /* ViewController.swift */; };
 		76A927A02222DB2100DD04F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A9279E2222DB2100DD04F1 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ADCE0AAC17D053BFA026ACF /* Pods-OmMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OmMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-OmMovies/Pods-OmMovies.release.xcconfig"; sourceTree = "<group>"; };
+		660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OmMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A927972222DB2100DD04F1 /* OmMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A9279A2222DB2100DD04F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A9279C2222DB2100DD04F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		76A927A12222DB2200DD04F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A927A42222DB2200DD04F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A927A62222DB2200DD04F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC26A49E412A1BB2F00BC529 /* Pods-OmMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OmMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OmMovies/Pods-OmMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7651DB0846F555633E159276 /* Pods_OmMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				76A927992222DB2100DD04F1 /* OmMovies */,
 				76A927982222DB2100DD04F1 /* Products */,
+				A2895C9E0D36D01D6C126DE0 /* Pods */,
+				A2F756D7CE173B67C4AD1254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = OmMovies;
 			sourceTree = "<group>";
 		};
+		A2895C9E0D36D01D6C126DE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC26A49E412A1BB2F00BC529 /* Pods-OmMovies.debug.xcconfig */,
+				1ADCE0AAC17D053BFA026ACF /* Pods-OmMovies.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A2F756D7CE173B67C4AD1254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76A927A92222DB2200DD04F1 /* Build configuration list for PBXNativeTarget "OmMovies" */;
 			buildPhases = (
+				086B22BA02457B7B8FE09168 /* [CP] Check Pods Manifest.lock */,
 				76A927932222DB2100DD04F1 /* Sources */,
 				76A927942222DB2100DD04F1 /* Frameworks */,
 				76A927952222DB2100DD04F1 /* Resources */,
+				AFFBCE16C34E994865231CB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086B22BA02457B7B8FE09168 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OmMovies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFFBCE16C34E994865231CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OmMovies/Pods-OmMovies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OmMovies/Pods-OmMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		76A927932222DB2100DD04F1 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		76A927AA2222DB2200DD04F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC26A49E412A1BB2F00BC529 /* Pods-OmMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		76A927AB2222DB2200DD04F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADCE0AAC17D053BFA026ACF /* Pods-OmMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
