@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// TableViewCell to show movie details.
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!

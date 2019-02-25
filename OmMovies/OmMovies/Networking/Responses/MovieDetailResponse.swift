@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Response object that decodes the selected movie details fetched from the OMdb.
 struct MovieDetailResponse: Decodable {
     private enum RootCodingKeys: String, CodingKey {
         case search = ""

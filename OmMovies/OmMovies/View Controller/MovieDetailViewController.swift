@@ -21,6 +21,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var plot: UITextView!
     
+    //Will be set when this class is created.
     var imdbId:String!
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class MovieDetailViewController: UIViewController {
             ])
     }
     
+    ///Gets the details of the movie with `imdbId` from OMdb.
     func fetchData() {
         OmService.shared.getMovieDetail(with: imdbId) {[unowned self] (response) in
             switch response {
@@ -49,6 +51,7 @@ class MovieDetailViewController: UIViewController {
         }
     }
     
+    /// Fills in the data in to the corresponding views.
     func fillDetails(for movie:MovieDetail){
         movieTitle.text = movie.title
         genre.text = movie.genre

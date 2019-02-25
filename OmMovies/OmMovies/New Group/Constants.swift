@@ -8,8 +8,10 @@
 
 import UIKit
 
+///Contains app constants.
 enum Constants {
     
+    ///Keys for Firebase Remote Config
     enum RemoteConfigKeys {
         static var titleText:String {
             return "titleText"
@@ -20,6 +22,7 @@ enum Constants {
     }
 
 }
+
 
 enum Storyboard {
     static var Main:UIStoryboard {

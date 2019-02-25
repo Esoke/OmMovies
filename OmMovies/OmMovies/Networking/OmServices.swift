@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// Service singleton, where all the network services are kept.
 public final class OmService {
     
     static let shared = OmService()
@@ -54,6 +55,7 @@ enum Error: Swift.Error {
     case serializationError(internal: Swift.Error)
     case networkError(internal: Swift.Error)
 }
+
 enum Result<Value> {
     case success(Value)
     case failure(Error)

@@ -8,13 +8,15 @@
 
 import UIKit
 
+///The view controller that shows the list of suggested movies or series based on the search key entered in the search box.
 class MovieListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    ///Holds the list of `Movie` objects.
     private var movieList:[Movie] = []
     
-    ///The bar button item to search albums.
+    ///The bar button item to search movies.
     fileprivate var searchItem: UIBarButtonItem?
     ///The search bar item where search phrases are entered.
     fileprivate var searchBar:UISearchBar?
@@ -29,6 +31,7 @@ class MovieListViewController: UIViewController {
         self.searchBarCancelButtonClicked(searchBar!)
     }
     
+    ///Sets up the UI.
     func setup() {
         searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(MovieListViewController.searchButtonTapped))
         navigationItem.setRightBarButtonItems([searchItem!], animated: true)
@@ -68,6 +71,7 @@ class MovieListViewController: UIViewController {
         }
     }
 
+    /// Opens the selected movie details in `MovieDetailViewController`.
     func openMovieDetails(with imdbId:String){
         guard let movieDetailsVC = Storyboard.Main.instantiateViewController(withIdentifier: ViewController.Identifier.MovieDetail) as? MovieDetailViewController else { return }
         movieDetailsVC.imdbId = imdbId
@@ -75,7 +79,7 @@ class MovieListViewController: UIViewController {
     }
 }
 
-
+//MARK: - UITableViewDataSource
 extension MovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.movieList.count
@@ -83,12 +87,14 @@ extension MovieListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.Identifier.Movie, for: indexPath)
+        
         if let movieCell = cell as? MovieTableViewCell {
             movieCell.setup(with: self.movieList[indexPath.row])
         }
         return cell
     }
     
+    //If there is no item then show the tableview footer.
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         var message = ""
         if  self.movieList.count == 0 {
@@ -98,6 +104,7 @@ extension MovieListViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = self.movieList[indexPath.row].imdbID
@@ -105,6 +112,7 @@ extension MovieListViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - UISearchBarDelegate
 extension MovieListViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.becomeFirstResponder()

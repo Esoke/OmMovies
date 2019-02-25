@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// The model that contains details of the selected movie.
 struct MovieDetail: Decodable {
     
     enum CodingKeys: String, CodingKey {

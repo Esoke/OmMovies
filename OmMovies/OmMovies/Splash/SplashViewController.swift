@@ -10,16 +10,20 @@ import UIKit
 import Firebase
 
 class SplashViewController: UIViewController {
+    /// Title of the splash screen, the logo name.
+    @IBOutlet weak var titleLabel: UILabel! // logo label
     
-    @IBOutlet weak var titleLabel: UILabel!
+    /// `titleLabel`'s distance to top layer
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
-    
     private var timer = Timer()
     private let initialTopConstraint = 20.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Check the network connection.
         ReachabilityManager.shared.isReachable()
+        
+        //If the network status is not connected, user cannot make service calls.
         setupRemoteConfigDefaults()
         fetchRemoteConfig()
     }
