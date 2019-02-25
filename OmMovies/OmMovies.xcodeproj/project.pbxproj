@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7651DB0846F555633E159276 /* Pods_OmMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */; };
 		76A927A02222DB2100DD04F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A9279E2222DB2100DD04F1 /* Main.storyboard */; };
-		76A927A22222DB2200DD04F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A927A12222DB2200DD04F1 /* Assets.xcassets */; };
 		76A927A52222DB2200DD04F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A927A32222DB2200DD04F1 /* LaunchScreen.storyboard */; };
 		76A927B12222DEF900DD04F1 /* OmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927B02222DEF900DD04F1 /* OmServices.swift */; };
 		76A927B32222DF0200DD04F1 /* OmRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927B22222DF0200DD04F1 /* OmRouter.swift */; };
@@ -35,7 +34,6 @@
 		660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OmMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A927972222DB2100DD04F1 /* OmMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A9279F2222DB2100DD04F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76A927A12222DB2200DD04F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A927A42222DB2200DD04F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A927B02222DEF900DD04F1 /* OmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmServices.swift; sourceTree = "<group>"; };
 		76A927B22222DF0200DD04F1 /* OmRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmRouter.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				76A927AC2222DEC600DD04F1 /* Networking */,
 				76A927DB2223325600DD04F1 /* Model */,
 				76A9279E2222DB2100DD04F1 /* Main.storyboard */,
-				76A927A12222DB2200DD04F1 /* Assets.xcassets */,
 				76A927A32222DB2200DD04F1 /* LaunchScreen.storyboard */,
 				76F7CC3722246F480078818B /* Info.plist */,
 				76F7CC2822246CE50078818B /* GoogleService-Info.plist */,
@@ -208,7 +205,7 @@
 				76A927932222DB2100DD04F1 /* Sources */,
 				76A927942222DB2100DD04F1 /* Frameworks */,
 				76A927952222DB2100DD04F1 /* Resources */,
-				AFFBCE16C34E994865231CB7 /* [CP] Embed Pods Frameworks */,
+				89002E1A4C499CD8013B9FA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,7 +256,6 @@
 			files = (
 				76A927A52222DB2200DD04F1 /* LaunchScreen.storyboard in Resources */,
 				76A927DA2223323F00DD04F1 /* MovieTableViewCell.xib in Resources */,
-                76A927A22222DB2200DD04F1 /* Assets.xcassets in Resources */,
 				76A927A02222DB2100DD04F1 /* Main.storyboard in Resources */,
 				76A927C82223193D00DD04F1 /* Splash.storyboard in Resources */,
 				76F7CC2922246CE50078818B /* GoogleService-Info.plist in Resources */,
@@ -291,7 +287,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFFBCE16C34E994865231CB7 /* [CP] Embed Pods Frameworks */ = {
+		89002E1A4C499CD8013B9FA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,7 +483,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC26A49E412A1BB2F00BC529 /* Pods-OmMovies.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H695HNYMRC;
 				INFOPLIST_FILE = OmMovies/Info.plist;
@@ -506,7 +501,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ADCE0AAC17D053BFA026ACF /* Pods-OmMovies.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H695HNYMRC;
 				INFOPLIST_FILE = OmMovies/Info.plist;
