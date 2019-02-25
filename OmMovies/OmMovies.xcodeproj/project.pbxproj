@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7651DB0846F555633E159276 /* Pods_OmMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */; };
 		76A927A02222DB2100DD04F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A9279E2222DB2100DD04F1 /* Main.storyboard */; };
-		76A927A22222DB2200DD04F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A927A12222DB2200DD04F1 /* Assets.xcassets */; };
 		76A927A52222DB2200DD04F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A927A32222DB2200DD04F1 /* LaunchScreen.storyboard */; };
 		76A927B12222DEF900DD04F1 /* OmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927B02222DEF900DD04F1 /* OmServices.swift */; };
 		76A927B32222DF0200DD04F1 /* OmRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927B22222DF0200DD04F1 /* OmRouter.swift */; };
@@ -20,7 +19,6 @@
 		76A927BD2223159800DD04F1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927BC2223159800DD04F1 /* ReachabilityManager.swift */; };
 		76A927C4222318DE00DD04F1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927C2222318DE00DD04F1 /* SplashViewController.swift */; };
 		76A927C82223193D00DD04F1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A927C72223193D00DD04F1 /* Splash.storyboard */; };
-		76A927CC2223263F00DD04F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76A927CB2223263F00DD04F1 /* GoogleService-Info.plist */; };
 		76A927CF22232B3400DD04F1 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927CE22232B3400DD04F1 /* MovieListViewController.swift */; };
 		76A927D122232BBD00DD04F1 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927D022232BBD00DD04F1 /* MovieDetailViewController.swift */; };
 		76A927D92223323F00DD04F1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A927D72223323F00DD04F1 /* MovieTableViewCell.swift */; };
@@ -28,6 +26,8 @@
 		76F7CC2522246C280078818B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7CC2122246C280078818B /* Constants.swift */; };
 		76F7CC2622246C280078818B /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7CC2322246C280078818B /* UIApplication.swift */; };
 		76F7CC2722246C280078818B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7CC2422246C280078818B /* AppDelegate.swift */; };
+		76F7CC2922246CE50078818B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76F7CC2822246CE50078818B /* GoogleService-Info.plist */; };
+		76F7CC2B22246D030078818B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F7CC2A22246D030078818B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		660FBE03E9CAABEF4E684F13 /* Pods_OmMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OmMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A927972222DB2100DD04F1 /* OmMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A9279F2222DB2100DD04F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76A927A12222DB2200DD04F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A927A42222DB2200DD04F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A927A62222DB2200DD04F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76A927B02222DEF900DD04F1 /* OmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmServices.swift; sourceTree = "<group>"; };
@@ -47,7 +46,6 @@
 		76A927BC2223159800DD04F1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		76A927C2222318DE00DD04F1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		76A927C72223193D00DD04F1 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		76A927CB2223263F00DD04F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76A927CE22232B3400DD04F1 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		76A927D022232BBD00DD04F1 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		76A927D72223323F00DD04F1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +53,8 @@
 		76F7CC2122246C280078818B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76F7CC2322246C280078818B /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		76F7CC2422246C280078818B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76F7CC2822246CE50078818B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76F7CC2A22246D030078818B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC26A49E412A1BB2F00BC529 /* Pods-OmMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OmMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OmMovies/Pods-OmMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,10 +98,10 @@
 				76A927AC2222DEC600DD04F1 /* Networking */,
 				76A927DB2223325600DD04F1 /* Model */,
 				76A9279E2222DB2100DD04F1 /* Main.storyboard */,
-				76A927A12222DB2200DD04F1 /* Assets.xcassets */,
 				76A927A32222DB2200DD04F1 /* LaunchScreen.storyboard */,
+				76F7CC2A22246D030078818B /* Assets.xcassets */,
+				76F7CC2822246CE50078818B /* GoogleService-Info.plist */,
 				76A927A62222DB2200DD04F1 /* Info.plist */,
-				76A927CB2223263F00DD04F1 /* GoogleService-Info.plist */,
 			);
 			path = OmMovies;
 			sourceTree = "<group>";
@@ -258,11 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A927A52222DB2200DD04F1 /* LaunchScreen.storyboard in Resources */,
-				76A927A22222DB2200DD04F1 /* Assets.xcassets in Resources */,
 				76A927DA2223323F00DD04F1 /* MovieTableViewCell.xib in Resources */,
-				76A927CC2223263F00DD04F1 /* GoogleService-Info.plist in Resources */,
 				76A927A02222DB2100DD04F1 /* Main.storyboard in Resources */,
 				76A927C82223193D00DD04F1 /* Splash.storyboard in Resources */,
+				76F7CC2B22246D030078818B /* Assets.xcassets in Resources */,
+				76F7CC2922246CE50078818B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
