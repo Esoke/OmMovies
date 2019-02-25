@@ -115,8 +115,6 @@ extension MovieListViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchBar.text = ""
         
-        movieList = []
-        tableView.reloadData()
         navigationItem.setRightBarButtonItems([searchItem!], animated: false)
     }
     
