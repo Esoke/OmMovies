@@ -10,9 +10,12 @@ import UIKit
 
 enum Constants {
     
-    enum LabelKeys {
+    enum RemoteConfigKeys {
         static var titleText:String {
             return "titleText"
+        }
+        static var titleTopConstraint:String {
+            return "titleTopConstraint"
         }
     }
 

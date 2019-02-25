@@ -91,19 +91,17 @@
 		76A927992222DB2100DD04F1 /* OmMovies */ = {
 			isa = PBXGroup;
 			children = (
+				76A927C6222318E300DD04F1 /* Splash */,
+				76F7CC1E22245B500078818B /* Commons */,
 				76A927D42223321600DD04F1 /* View */,
 				76A927CD22232B2000DD04F1 /* View Controller */,
-				76A927BF222316C200DD04F1 /* Extensions */,
 				76A927AC2222DEC600DD04F1 /* Networking */,
 				76A927DB2223325600DD04F1 /* Model */,
-				76A9279A2222DB2100DD04F1 /* AppDelegate.swift */,
 				76A9279E2222DB2100DD04F1 /* Main.storyboard */,
 				76A927A12222DB2200DD04F1 /* Assets.xcassets */,
 				76A927A32222DB2200DD04F1 /* LaunchScreen.storyboard */,
 				76A927A62222DB2200DD04F1 /* Info.plist */,
 				76A927CB2223263F00DD04F1 /* GoogleService-Info.plist */,
-				76A927C6222318E300DD04F1 /* Splash */,
-				76A927C922231D2900DD04F1 /* Constants.swift */,
 			);
 			path = OmMovies;
 			sourceTree = "<group>";
@@ -170,6 +168,17 @@
 				76A927B62222DF1F00DD04F1 /* MovieDetail.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		76F7CC1E22245B500078818B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				76A927C922231D2900DD04F1 /* Constants.swift */,
+				76A9279A2222DB2100DD04F1 /* AppDelegate.swift */,
+				76A927BF222316C200DD04F1 /* Extensions */,
+			);
+			name = Commons;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A2895C9E0D36D01D6C126DE0 /* Pods */ = {
