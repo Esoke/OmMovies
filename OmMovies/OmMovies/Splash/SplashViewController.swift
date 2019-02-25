@@ -12,9 +12,10 @@ import Firebase
 class SplashViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
     
     private var timer = Timer()
-
+    private let initialTopConstraint = 20.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,8 @@ class SplashViewController: UIViewController {
     
     func setupRemoteConfigDefaults() {
         let defaultValues = [
-            Constants.LabelKeys.titleText : "" as NSObject,
+            Constants.RemoteConfigKeys.titleText : "" as NSObject,
+            Constants.RemoteConfigKeys.titleTopConstraint: initialTopConstraint as NSObject
         ]
         RemoteConfig.remoteConfig().setDefaults(defaultValues)
     }
@@ -48,10 +50,13 @@ class SplashViewController: UIViewController {
     
     func updateUIWithRemoteConfigValues() {
         let rc = RemoteConfig.remoteConfig()
-        if let title = rc.configValue(forKey: Constants.LabelKeys.titleText).stringValue {
+        if let title = rc.configValue(forKey: Constants.RemoteConfigKeys.titleText).stringValue {
             self.titleLabel.text = title
             timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.openMovieList), userInfo: nil, repeats: false)
-
+        }
+        if let topConstraint = rc.configValue(forKey: Constants.RemoteConfigKeys.titleTopConstraint).numberValue?.doubleValue {
+            self.titleTopConstraint.constant = CGFloat(topConstraint)
+            self.animateLogo()
         }
     }
     
@@ -62,4 +67,15 @@ class SplashViewController: UIViewController {
 
     }
 
+    func animateLogo() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.view.layoutIfNeeded()
+        }) { _ in
+            UIView.animate(withDuration: 1.0) {
+                self.titleLabel.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+                self.titleLabel.shadowColor = .lightGray
+                self.titleLabel.shadowOffset = CGSize(width: 1, height: 1)
+            }
+        }
+    }
 }
